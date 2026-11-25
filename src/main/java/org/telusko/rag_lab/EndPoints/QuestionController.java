@@ -18,7 +18,7 @@ public class QuestionController {
     public QuestionController(
             JdbcTemplate jdbc,
             OllamaEmbeddingClient embeddings,
-            @Value("${top-k}") int topK) {
+            @Value("${app.top-k}") int topK) {
         this.jdbc = jdbc;
         this.embeddings = embeddings;
         this.topK = topK;

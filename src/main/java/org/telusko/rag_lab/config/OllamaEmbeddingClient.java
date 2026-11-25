@@ -34,7 +34,7 @@ public class OllamaEmbeddingClient {
                 || response.embeddings().isEmpty()) {
             throw new IllegalStateException("Ollama returned no embedding");
         }
-        return response.embeddings().getFirst();
+        return response.embeddings().get(0);
     }
     //used to send a response to the ollama
     private record EmbedRequest(String model, String input) {}
